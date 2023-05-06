@@ -1,0 +1,55 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #f1f1f1;
+}
+
+.container {
+	width: 600px;
+	height: 400px;
+	margin: 50px auto;
+	position: relative;
+}
+
+.player {
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.enemy {
+	width: 50px;
+	height: 50px;
+	background-color: blue;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.bullet {
+	width: 10px;
+	height: 20px;
+	background-color: black;
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.shoot {
+	animation: shoot 1s linear;
+}
+
+@keyframes shoot {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-400px);
+	}
+}
